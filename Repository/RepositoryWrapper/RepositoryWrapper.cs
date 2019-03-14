@@ -20,8 +20,11 @@ namespace Repository.RepositoryWrapper
         private IPersonRegistryRepository  _personRegister;
         private IMarriageRepository        _marriage;
         private IFamilyRepository          _family;
-    
 
+        public RepositoryWrapper(PersonRegistryContext context)
+        {
+            _context = context;
+        }
         public IPersonRepository Persons
         {
             get

@@ -10,7 +10,7 @@ namespace Person.Services
 {
     public class PersonService : IPersonService
     {
-        private readonly  IRepositoryWrapper _repository;
+        private readonly IRepositoryWrapper _repository;
         public PersonService(IRepositoryWrapper repository)
         {
             _repository = repository;
