@@ -8,5 +8,7 @@ namespace Person.Services
     public interface IPersonService
     {
          void CreatePerson(PersonViewModel personViewModel);
+        PersonViewModel GetByNameAndBirthDate(string firstName, string lastName,DateTime birthDate);
+        PersonViewModel GetById(int id);
     }
 }

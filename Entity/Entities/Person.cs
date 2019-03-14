@@ -10,8 +10,11 @@ namespace Entity.Entities
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { get; set; }
 
-        [Required(ErrorMessage = "Fill in person name")]
-        public string Name { get; set; }
+        [Required(ErrorMessage = "Fill in person first name")]
+        public string FirstName { get; set; }
+
+        [Required(ErrorMessage = "Fill in person last name")]
+        public string LastName { get; set; }
 
         [Required(ErrorMessage = "Fill in person birthdate")]
         public DateTime BirthDate{ get; set; }

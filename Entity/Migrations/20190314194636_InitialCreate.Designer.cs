@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Entity.Migrations
 {
     [DbContext(typeof(PersonRegistryContext))]
-    [Migration("20190314120953_InitialCreate")]
+    [Migration("20190314194636_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -67,7 +67,10 @@ namespace Entity.Migrations
 
                     b.Property<DateTime>("BirthDate");
 
-                    b.Property<string>("Name")
+                    b.Property<string>("FirstName")
+                        .IsRequired();
+
+                    b.Property<string>("LastName")
                         .IsRequired();
 
                     b.HasKey("ID");

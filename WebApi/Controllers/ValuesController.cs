@@ -22,7 +22,6 @@ namespace WebApi.Controllers
         public ActionResult<IEnumerable<string>> Get()
         {
             PersonViewModel personViewModel = new PersonViewModel();
-            _personService.CreatePerson(personViewModel);
             return new string[] { "value1", "value2" };
         }
 

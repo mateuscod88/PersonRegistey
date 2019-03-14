@@ -65,7 +65,10 @@ namespace Entity.Migrations
 
                     b.Property<DateTime>("BirthDate");
 
-                    b.Property<string>("Name")
+                    b.Property<string>("FirstName")
+                        .IsRequired();
+
+                    b.Property<string>("LastName")
                         .IsRequired();
 
                     b.HasKey("ID");

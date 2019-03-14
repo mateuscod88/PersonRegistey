@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repository", "Repository\Re
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contracts", "Contracts\Contracts.csproj", "{6FC49048-0CCC-4B1F-A637-7D855FACDB4E}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PersonTest", "PersonTest\PersonTest.csproj", "{96F977D9-C9C9-4F95-BB1D-1E6B2AC75B42}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{6FC49048-0CCC-4B1F-A637-7D855FACDB4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6FC49048-0CCC-4B1F-A637-7D855FACDB4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6FC49048-0CCC-4B1F-A637-7D855FACDB4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96F977D9-C9C9-4F95-BB1D-1E6B2AC75B42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96F977D9-C9C9-4F95-BB1D-1E6B2AC75B42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96F977D9-C9C9-4F95-BB1D-1E6B2AC75B42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96F977D9-C9C9-4F95-BB1D-1E6B2AC75B42}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
