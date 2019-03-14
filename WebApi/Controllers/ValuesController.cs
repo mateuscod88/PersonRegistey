@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Person.Model;
+using Person.Services;
 
 namespace WebApi.Controllers
 {
@@ -10,10 +12,17 @@ namespace WebApi.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
+        private IPersonService _personService;
+        public ValuesController(IPersonService personService)
+        {
+            _personService = personService;
+        }
         // GET api/values
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
+            PersonViewModel personViewModel = new PersonViewModel();
+            _personService.CreatePerson(personViewModel);
             return new string[] { "value1", "value2" };
         }
 

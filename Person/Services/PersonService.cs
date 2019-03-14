@@ -1,5 +1,6 @@
 ﻿using Entity.Context;
 using Person.Model;
+using Repository.RepositoryWrapper.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,14 +10,14 @@ namespace Person.Services
 {
     public class PersonService : IPersonService
     {
-        private readonly PersonRegistryContext _context;
-        public PersonService(PersonRegistryContext context)
+        private readonly  IRepositoryWrapper _repository;
+        public PersonService(IRepositoryWrapper repository)
         {
-            _context = context;
+            _repository = repository;
         }
         public void CreatePerson(PersonViewModel personViewModel)
         {
-            var a = _context.Persons.FirstOrDefault();
+            var a = _repository.Persons.FindAll();
         }
     }
 }
