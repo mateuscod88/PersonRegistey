@@ -29,6 +29,17 @@ namespace Person.Services
         {
             return _repository.Persons.FindByCondition(person => person.ID == id).Select(x => new PersonViewModel { FirstName = x.FirstName, LastName = x.LastName, BirthDate = x.BirthDate, ID = x.ID }).FirstOrDefault();
         }
+        public PersonRelationshipsViewModel GetByIdWithRelationships(int id)
+        {
+            var parents = _repository.Familys.FindByCondition(family => family.Parent.ID == id)..ToList();
+            var childrens = _repository.Familys.FindByCondition(family => family.Child.ID == id).Select(x => new PersonViewModel { ID = x.Child.ID, FirstName = x.Child.FirstName, LastName = x.Child.LastName, BirthDate = x.Child.BirthDate }).ToList();
+
+            var personRelationshipsViewModel = _repository.Persons.FindByCondition(person => person.ID == id).Select(x => new PersonRelationshipsViewModel { FirstName = x.FirstName, LastName = x.LastName, BirthDate = x.BirthDate, ID = x.ID }).FirstOrDefault();
+            personRelationshipsViewModel.Family.AddRange(parents);
+            personRelationshipsViewModel.Family.AddRange(childrens);
+
+            return personRelationshipsViewModel;
+        }
 
 
     }

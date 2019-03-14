@@ -10,5 +10,6 @@ namespace Person.Services
          void CreatePerson(PersonViewModel personViewModel);
         PersonViewModel GetByNameAndBirthDate(string firstName, string lastName,DateTime birthDate);
         PersonViewModel GetById(int id);
+        PersonRelationshipsViewModel GetByIdWithRelationships(int id);
     }
 }

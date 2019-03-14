@@ -31,11 +31,9 @@ namespace WebApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-            var cs = Configuration.GetConnectionString("PersonRegistryDb");
+
             services.AddDbContext<PersonRegistryContext>(options => options.UseSqlServer(Configuration.GetConnectionString("PersonRegistryDb")));
             services.AddTransient<IRepositoryWrapper, RepositoryWrapper>();
-
-
             services.AddTransient<IPersonService, PersonService>();
 
         }

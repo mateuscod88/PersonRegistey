@@ -19,6 +19,7 @@ namespace WebApi.Controllers
         {
             _personService = personService;
         }
+
         [HttpGet("{id}",Name = "GetById")]
         public ActionResult<PersonViewModel> GetById(int id)
         {
@@ -29,6 +30,17 @@ namespace WebApi.Controllers
             }
             return person;
         }
+        [HttpGet("{id}", Name = "GetByIdWithRelationships")]
+        public ActionResult<PersonViewModel> GetByIdWithRelationships(int id)
+        {
+            var person = _personService.GetByIdWithRelationships(id);
+            if (person == null)
+            {
+                return NotFound();
+            }
+            return person;
+        }
+
         [HttpGet( Name = "GetByNameAndBirthDate")]
         public ActionResult<PersonViewModel> GetByNameAndBirthDate([FromQuery]string firstName, [FromQuery]string lastName, [FromQuery]DateTime birthDate)
         {
