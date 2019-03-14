@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Entity.Context
 {
-    class PersonRegistryContext : DbContext
+    public class PersonRegistryContext : DbContext
     {
         public PersonRegistryContext(DbContextOptions<PersonRegistryContext> options) : base(options)
         {

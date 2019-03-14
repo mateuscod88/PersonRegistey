@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Entity.Entities
 {
-    class Marriage
+    public class Marriage
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

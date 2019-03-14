@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Entity.Entities
 {
-    class Family
+    public class Family
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

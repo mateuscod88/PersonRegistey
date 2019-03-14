@@ -6,11 +6,11 @@ using System.Text;
 
 namespace Entity.Entities
 {
-    class PersonRegister
+    public class PersonRegister
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { get; set; }
-        public List<Person> Persons { get; set; }
+        public Person Person { get; set; }
     }
 }
